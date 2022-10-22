@@ -64,4 +64,9 @@ export default {
   tailwindcss: {
     exposeConfig: true,
   },
+
+  //
+  env: {
+    NEXT_URL: 'https://nextjs-test-swart-two.vercel.app',
+  },
 }
