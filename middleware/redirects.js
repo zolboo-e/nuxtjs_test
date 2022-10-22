@@ -3,6 +3,6 @@ export default function ({ redirect, route }) {
   const isMatched = route.matched.length !== 0
 
   if (!isMatched) {
-    return redirect(`http://192.168.1.42:3001${path}`)
+    return redirect(`${process.env.NEXT_URL}${path}`)
   }
 }

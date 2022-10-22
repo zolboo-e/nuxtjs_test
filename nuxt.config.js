@@ -44,8 +44,8 @@ export default {
   auth: {
     strategies: {
       auth0: {
-        domain: 'dev-62nsqhe6.us.auth0.com',
-        clientId: 'lmtAGiAB1KfPwksQEOQtCab2DacVhkBG',
+        domain: process.env.AUTH0_ISSUER_BASE_URL,
+        clientId: process.env.AUTH0_CLIENT_ID,
       },
     },
   },
