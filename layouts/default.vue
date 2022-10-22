@@ -3,8 +3,12 @@
     <div class="bg-[#C62F37] flex justify-center items-center">
       <div class="w-8 h-8 bg-white rounded flex justify-center items-center">GTN</div>
     </div>
-    <div class="bg-blue-400">Header</div>
-    <ul class="bg-[#EA3A44] row-start-2 text-white">
+    <div class="bg-blue-400">
+      <div v-if="!$auth.loggedIn">
+        <button @click="$auth.loginWith('auth0')">Login</button>
+      </div>
+    </div>
+    <ul class="bg-[#EA3A44] row-start-2 text-white relative">
       <li>
         <NuxtLink to="/">
           <a class="w-full aspect-square flex justify-center items-center hover:bg-white/10">
@@ -32,6 +36,10 @@
             Settings
           </a>
         </NuxtLink>
+      </li>
+      <li v-if="$auth.loggedIn">
+        <button class="absolute bottom-0 w-full aspect-square flex justify-center items-center hover:bg-white/10"
+          @click="$auth.logout()">Logout</button>
       </li>
     </ul>
     <Nuxt />

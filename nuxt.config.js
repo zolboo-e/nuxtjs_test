@@ -42,10 +42,14 @@ export default {
 
   //
   auth: {
+    redirect: {
+      login: '/login',
+      logout: '/',
+    },
     strategies: {
       auth0: {
-        domain: process.env.AUTH0_ISSUER_BASE_URL,
-        clientId: process.env.AUTH0_CLIENT_ID,
+        domain: 'dev-62nsqhe6.us.auth0.com',
+        clientId: 'lmtAGiAB1KfPwksQEOQtCab2DacVhkBG',
       },
     },
   },
@@ -63,10 +67,5 @@ export default {
   //
   tailwindcss: {
     exposeConfig: true,
-  },
-
-  //
-  env: {
-    NEXT_URL: 'https://nextjs-test-swart-two.vercel.app',
   },
 }

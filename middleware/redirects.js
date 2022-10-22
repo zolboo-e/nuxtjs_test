@@ -3,6 +3,6 @@ export default function ({ redirect, route }) {
   const isMatched = route.matched.length !== 0
 
   if (!isMatched) {
-    return redirect(`${process.env.NEXT_URL}${path}`)
+    return redirect(`https://nextjs-test-swart-two.vercel.app${path}`)
   }
 }
