@@ -12,9 +12,7 @@ export const useAuthStore = defineStore('auth', () => {
     user.value = value
   }
   const initialFetch = async () => {
-    const response = await fetch(
-      'https://nextjs-test-swart-two.vercel.app/api/test'
-    )
+    const response = await fetch('/api/test')
     const { user } = await response.json()
 
     setLoggedIn(!!user)
