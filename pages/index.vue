@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-blue-400">Nuxt Index Page</h1>
-    <div v-if="!!store.user">
+    <div v-if="store.user">
       <div className="w-[120px] h-[120px] relative">
         <img :src="`${store.user.picture}`" />
       </div>
