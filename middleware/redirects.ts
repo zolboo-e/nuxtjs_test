@@ -5,8 +5,7 @@ const middleware: Middleware = ({ redirect, route }) => {
   const isMatched = route.matched.length !== 0
 
   if (!isMatched) {
-    return redirect(`https://nextjs-test-swart-two.vercel.app${path}`)
-    // return redirect(`http://192.168.1.42:3001${path}`)
+    return redirect(`${process.env.NUXT_ENV_NEXT_URL}${path}`)
   }
 }
 
