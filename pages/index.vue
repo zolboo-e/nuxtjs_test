@@ -1,17 +1,26 @@
 <template>
   <div>
     <h1 class="text-blue-400">Nuxt Index Page</h1>
-    <div v-if="$auth.loggedIn">
-      <img :src="`${$auth.user?.picture}`" />
-      <h1>{{$auth.user?.email}}</h1>
+    <div>
+      <img :src="`${store.user?.picture}`" />
+      <h1>{{store.user?.email}}</h1>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent, useContext } from '@nuxtjs/composition-api'
+import { useAuthStore } from "~/store"
 
-export default Vue.extend({
-  name: 'IndexPage',
+export default defineComponent({
+  setup() {
+    const context = useContext();
+    const store = useAuthStore(context.$pinia)
+
+    const toggle = () => {
+      store.setLoggedIn(!store.loggedIn)
+    }
+    return { store, toggle }
+  },
 })
 </script>

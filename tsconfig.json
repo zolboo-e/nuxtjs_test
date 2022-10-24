@@ -12,10 +12,9 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["./*"]
     },
-    "types": ["@nuxt/types", "@types/node", "@nuxtjs/auth-next"]
+    "types": ["@nuxt/types", "@types/node", "@pinia/nuxt"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }
