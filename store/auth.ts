@@ -2,7 +2,7 @@ import { ref } from '@nuxtjs/composition-api'
 import { defineStore } from 'pinia'
 
 export const useAuthStore = defineStore('auth', () => {
-  const loggedIn = ref<boolean>(false)
+  const loggedIn = ref<boolean | null>(null)
   const user = ref<Record<string, unknown> | null>(null)
 
   const setLoggedIn = (value: boolean) => {

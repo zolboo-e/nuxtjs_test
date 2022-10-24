@@ -4,7 +4,7 @@
       <div class="w-8 h-8 bg-white rounded flex justify-center items-center">GTN</div>
     </div>
     <div class="bg-blue-400">
-      <div v-if="!store.loggedIn">
+      <div v-if="store.loggedIn === false">
         <NuxtLink to="/api/auth/login">Login</NuxtLink>
       </div>
     </div>
