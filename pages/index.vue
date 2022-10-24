@@ -1,8 +1,10 @@
 <template>
   <div>
     <h1 class="text-blue-400">Nuxt Index Page</h1>
-    <div>
-      <img v-if="!!store.user" :src="`${store.user.picture}`" />
+    <div v-if="!!store.user">
+      <div className="w-[120px] h-[120px] relative">
+        <img :src="`${store.user.picture}`" />
+      </div>
       <h1>{{store.user?.email}}</h1>
     </div>
   </div>
