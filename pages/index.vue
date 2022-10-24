@@ -2,7 +2,7 @@
   <div>
     <h1 class="text-blue-400">Nuxt Index Page</h1>
     <div>
-      <img :src="`${store.user?.picture}`" />
+      <img v-if="!!store.user" :src="`${store.user.picture}`" />
       <h1>{{store.user?.email}}</h1>
     </div>
   </div>
